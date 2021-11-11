@@ -8,6 +8,7 @@ public class P5{
         int sum_all =0;
         int sum = 0;
         int x = 0;
+        int count_x = -1;
 
         while (n !=0) {
             if (n > max_1) {
@@ -32,6 +33,10 @@ public class P5{
                 sum_all+=n;
                 x++;
                 //System.out.println("else sum_all = " + sum_all);
+            }
+            if (max_1 != max_2){
+                x = 0;
+                sum = 0;
             }
             n = vvod.nextInt();
         }
