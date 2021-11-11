@@ -16,7 +16,7 @@ public class P4 {
                     isProst = false;
                 }
             }
-            if (isProst && n !=0) {
+            if (isProst && n >0) {
                 System.out.print(i + " ");
                 countProst++;
             }
