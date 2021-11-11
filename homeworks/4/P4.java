@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class P(3.1) {
+public class P4 {
     public static void main(String[] args) {
         Scanner vvod = new Scanner(System.in);
         int n = vvod.nextInt();
