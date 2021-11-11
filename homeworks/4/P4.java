@@ -28,6 +28,6 @@ public class P4 {
 
         }
         System.out.println("");
-        System.out.println("кол-во простых чисел: "+ countProst);
+        
     }
 }
