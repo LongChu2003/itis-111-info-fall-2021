@@ -1,3 +1,4 @@
+import java.util.*;
 public class P3 {
     public static void main(String[] args) {
         Scanner vvod = new Scanner(System.in);
