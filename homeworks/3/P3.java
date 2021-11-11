@@ -11,10 +11,10 @@ public class P3{
                 isProst = false;
             }
         }
-        if (isProst == true){
+
+        if (isProst == true && n !=1 && n !=0){
             System.out.println("YES");
         } else {
             System.out.println("NO");
-        }
     }
 }
