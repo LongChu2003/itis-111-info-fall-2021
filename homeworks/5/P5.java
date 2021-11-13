@@ -1,50 +1,29 @@
 import java.util.Scanner;
 public class P5{
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner vvod = new Scanner(System.in);
         int n = vvod.nextInt();
-        int max_1 = n;
-        int max_2 = n;
-        int sum_all =0;
-        int sum = 0;
-        int x = 0;
-        int count_x = -1;
-
-        while (n !=0) {
-            if (n > max_1) {
-                max_2 = max_1;
-                //System.out.println("max_2 = " + max_2 );
-                max_1 = n;
-                //System.out.println("max_1 = " + max_1);
-                sum = sum_all;
-
-
-                //System.out.println("if sum = " + sum);
-                sum_all = 0;
-                //System.out.println("if sum_all = " + sum_all);
-            } else if (n > max_2) {
-                max_2 = n;
-                //System.out.println("max_2 = " + max_2 );
-                sum = sum_all;
-                //System.out.println("else if sum = " + sum);
-                sum_all = 0;
-                //System.out.println("else if sum_all = " + sum_all);
-            } else {
-                sum_all+=n;
-                x++;
-                //System.out.println("else sum_all = " + sum_all);
-            }
-            if (max_1 != max_2){
-                x = 0;
+        int max1 = -11111;
+        int max2 = 0;
+        int sum =0;
+        int sum_final = 0;
+        boolean f = true;
+        while (n!=0){
+            if (n > max1){
+                max1 = n;
                 sum = 0;
+            } else if (n == max1 && f) {
+                max2 = max1;
+                sum_final = sum - max2 ;
+                f = false;
             }
+            sum +=n;
             n = vvod.nextInt();
         }
-        //System.out.println(max_1 +" " + max_2);
-        if (x>0){
-            System.out.println(sum);
-        } else {
+        if (sum_final == 0){
             System.out.println("NO");
+        } else {
+        System.out.println(sum_final);
         }
     }
 }
