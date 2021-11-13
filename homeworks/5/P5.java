@@ -3,8 +3,8 @@ public class P5{
     public static void main(String[] args){
         Scanner vvod = new Scanner(System.in);
         int n = vvod.nextInt();
-        int max1 = n;
-        int max2 = -1111;
+        int max1 = -111;
+        int max2 = 0;
         int sum =0;
         int sum_final = 0;
         boolean f = true;
