@@ -3,12 +3,13 @@ public class P6{
     public static void main(String[] args) {
         Scanner vvod = new Scanner(System.in);
         int n = vvod.nextInt();
-        int max = n;
+        int max = 0;
         int min = n;
         int sum = 0;
         int sum_final = 0;
         int count = 0;
         int first_maxx = 0;
+        int  max1 = 0;
         while (n !=0) {
             if (n <= min) {
                 min = n;
@@ -28,7 +29,7 @@ public class P6{
             }
             n = vvod.nextInt();
         }
-        if (sum_final > 0 && first_maxx > 0){
+        if (sum_final > 0 && first_maxx > 0 && count> 0){
             System.out.println(sum_final + max + min);
         } else if (count == 0){
             System.out.println("NO");
