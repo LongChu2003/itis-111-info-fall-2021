@@ -4,10 +4,10 @@ import java.util.*;
 public class C2W1 {
     // Решение задачи 1 следует писать здесь
     public static int getI(int k, int m, int n) {
-      return 0;
+      return (k+m);
     }
     public static int getJ(int k, int m, int n) {
-      return 0;
+      return k;
     }
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
