@@ -1,5 +1,5 @@
 import java.util.*;
-public class P9 {
+public class HomeWork {
     public static void main(String[] args){
         Scanner vvod = new Scanner(System.in);
         int n = vvod.nextInt();
@@ -37,7 +37,7 @@ public class P9 {
         int y = 1;//координаты ячейки a[x][y]
 
         while (s < n*m) {
-            
+
             //двигаемся вправо
             while (a[x][y + 1] == 0) {
                 a[x][y] = s;
@@ -64,6 +64,13 @@ public class P9 {
                 a[x][y] = s;
                 s++;
                 x--;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (a[i][j] == 0) {
+                    a[i][j] = s;
+                }
             }
         }
 
