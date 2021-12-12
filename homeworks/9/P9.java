@@ -1,5 +1,5 @@
 import java.util.*;
-public class HomeWork {
+public class P9 {
     public static void main(String[] args){
         Scanner vvod = new Scanner(System.in);
         int n = vvod.nextInt();
