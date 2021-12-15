@@ -1,36 +1,38 @@
 import  java.util.*;
 public class P11 {
-    public static int[] carry(int q, int[] a){
-        int div = 0;
-        int k = a.length;
-
-        for (int i = 0; i < a.length; i++) {
-            a[i] += div;
-            div = a[i] / q;
-            a[i] = a[i] % q;
-        }
-
-        if (div>0){
-            int[] b = new int[k+1];
-            for (int i=0; i<Math.min(a.length, k+1); i++) {
-                b[i] = a[i];
-                //System.out.println("b[i] = " +  b[i] + ", i = "+ i);
-                a = b;
-            }
-            a[k] = div;
-            k++;
-        }
-        while (k>0 && a[k-1]==0) {
-            k--;
-        }
-        int[] b = new int[k];
-        for (int i=0; i<Math.min(a.length, k+1); i++) {
+    public static int[] extend(int[] a, int n) {
+        int[] b = new int[n];
+        for (int i = 0; i < Math.min(a.length, n); i++) {
             b[i] = a[i];
         }
-        a = b;
+        return b;
+    }
+
+    public static int[] carry(int q, int[] a) {
+        int c = 0;
+        int n = a.length;
+        for (int i = 0; i < n; i++) {
+            a[i] += c;
+            c = a[i] / q;
+            a[i] %= q; // a[i] = a[i] % q
+            if (a[i] < 0) {
+                a[i] += q;
+                c = -1;
+            }
+        }
+        if (c > 0) {
+            a = extend(a, n + 1);
+            a[n] = c;
+            n++;
+        }
+        while (n > 0 && a[n - 1] == 0) {
+            n--;
+        }
+        a = extend(a, n);
         return a;
     }
-    public static void main(String[] args){
-        System.out.println(Arrays.toString(carry(10, new int[] {42})));
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(carry(10, new int[]{42})));
     }
 }
