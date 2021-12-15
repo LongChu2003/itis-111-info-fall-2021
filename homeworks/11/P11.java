@@ -1,5 +1,5 @@
 import  java.util.*;
-public class kcass {
+public class P11 {
     public static int[] carry(int q, int[] a){
         int div = 0;
         int k = a.length;
