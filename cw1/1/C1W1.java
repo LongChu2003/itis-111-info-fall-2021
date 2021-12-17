@@ -39,6 +39,6 @@ public class C1W1{
         {
             System.out.println("YES");
         } else {
-            System.out.println("No");
+            System.out.println("NO");
         }    }
 }
